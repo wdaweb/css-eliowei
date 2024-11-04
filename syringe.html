@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    .container {
+      height: 300px;
+      width: 1000px;
+      /* border: 1px #aaa solid; */
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 0;
+    }
+
+    .syringe-body {
+      width: 50px;
+      height: 100px;
+      border: 1px #aaa solid;
+      background: black;
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+    }
+
+    .syringe-body::before {
+      content: "Made In Taiwan";
+      width: 200px;
+      height: 100px;
+      border: 1px #aaa solid;
+      background: linear-gradient(to left, #bbb 1px, transparent 1px) repeat-x top left/15px 16px,
+        linear-gradient(to bottom, white, #ccc, white);
+
+      position: absolute;
+      top: 50%;
+      left: -203%;
+      transform: translate(-50%, -50%);
+
+      line-height: 180px;
+      color: #aaa;
+      font-weight: bold;
+    }
+
+    .syringe-body::after {
+      content: "";
+      width: 200px;
+      height: 100px;
+      border: 1px #aaa solid;
+
+      background: linear-gradient(to left, #bbb 1px, transparent 0%) repeat-x top right/ 15px 16px,
+        linear-gradient(to top,
+          rgba(239, 241, 104, 0.5),
+          rgba(229, 231, 98, 0.5)),
+        linear-gradient(to bottom, white, #999, white);
+      position: absolute;
+      top: 50%;
+      left: 302%;
+      transform: translate(-50%, -50%);
+    }
+
+    .syringe-tail {
+      width: 60px;
+      height: 70px;
+      border: 1px #aaa solid;
+      background: linear-gradient(to bottom, white, #ccc, white);
+
+      position: absolute;
+      top: 50%;
+      left: 25%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+    }
+
+    .syringe-tail:before {
+      content: "";
+      width: 40px;
+      height: 100px;
+      border: 1px #aaa solid;
+      border-radius: 5px;
+      background: linear-gradient(to bottom, white, #ccc, white);
+
+      position: absolute;
+      top: 50%;
+      left: -32%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+    }
+
+    .syringe-head {
+      width: 60px;
+      height: 70px;
+      border: 1px #aaa solid;
+      border-radius: 5px;
+      background: linear-gradient(to bottom, white, #ccc, white);
+
+      position: absolute;
+      top: 50%;
+      left: 75%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+    }
+
+    .syringe-head::before {
+      content: "";
+      width: 80px;
+      border: 1px #aaa solid;
+      border-radius: 5px;
+
+      position: absolute;
+      top: 50%;
+      left: 167%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="syringe-body"></div>
+    <div class="syringe-tail"></div>
+    <div class="syringe-head"></div>
+  </div>
+</body>
+
+</html>
